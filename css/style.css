@@ -1,0 +1,542 @@
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Header
+- Nav
+- Section/Content
+- Footer
+- Media Queries
+*/
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  /* Base Colors */
+  --main-bg-color: #000;
+  --second-bg-color: #242424;
+  --third-bg-color: #1A1A1A;
+  --main-text-color: #DFDFDF;
+  --second-text-color: #FFF;
+  --third-text-color: #7D7D7D;
+  --accent-text-color: #3399CC;
+  /* Base Font Sizes */
+  --text-xxsmall: 16px;
+  --text-xsmall: 18px;
+  --text-small: 21px;
+  --text-medium: 24px;
+  --text-large: 30px;
+  --text-xlarge: 50px;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+body {
+  background-color: var(--main-bg-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--text-small);
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-size: 35px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+}
+h1:before,
+h2:before {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 64px;
+  background: #3399CC;
+  margin-bottom: 10px;
+}
+h4 {
+  font-size: 24px;
+  font-weight: 300;
+}
+p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4em;
+  letter-spacing: .04em;
+}
+
+/* Text Color Classes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.grey1 {
+  color: #616161;
+}
+.grey2 {
+  color: #616161;
+}
+.accent {
+  color: #3399CC;
+}
+.white {
+  color: #fff;
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a.button {
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  transition: 0.3s;
+}
+a.button.accent {
+  border-color: #3399CC;
+  background: rgba(51,153, 204, 0.25);
+}
+a.button.white {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.25);
+}
+.learn_more .fa {
+  font-size: var(--text-xsmall);
+}
+a.button.accent:hover {
+  background-color: #3399CC;
+  color: white;
+  transition: 0.3s;
+}
+a.button.accent:active {
+  background-color: #3399CC;
+  color: white;
+}
+a.button.white:hover {
+  background-color: white;
+  color: #3399CC;
+  transition: 0.3s;
+}
+a.button.white:active {
+  background-color: white;
+  color: #3399CC;
+}
+.stat-button {
+  margin-top: 0px !important;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+header {
+  height: 100vh;
+}
+header .content {
+  bottom: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.banner {
+  z-index: -999;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url(../images/header-bg.jpg) center no-repeat;
+  background-size: cover;
+}
+.banner .overlay-1 {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.08) 17%, rgba(0, 0, 0, 0.07) 25%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.6) 83%, #000000 100%);
+  background: -webkit-gradient(top, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.08) 17%, rgba(0, 0, 0, 0.07) 25%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.6) 83%, #000000 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.08) 17%, rgba(0, 0, 0, 0.07) 25%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.6) 83%, #000000 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.08) 17%, rgba(0, 0, 0, 0.07) 25%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.6) 83%, #000000 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.08) 17%, rgba(0, 0, 0, 0.07) 25%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.6) 83%, #000000 100%);
+  background: linear-gradient(top, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.08) 17%, rgba(0, 0, 0, 0.07) 25%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.6) 83%, #000000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000', GradientType=0);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.banner .overlay-2 {
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.08) 17%, rgba(0, 0, 0, 0.07) 25%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.6) 83%, #000000 100%);
+  background: -moz-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.08) 17%, rgba(0, 0, 0, 0.07) 25%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.6) 83%, #000000 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.08) 17%, rgba(0, 0, 0, 0.07) 25%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.6) 83%, #000000 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.08) 17%, rgba(0, 0, 0, 0.07) 25%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.6) 83%, #000000 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000', GradientType=0);
+  /* IE6-9 */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.banner img {
+  object-fit: cover;
+  object-position: center;
+  height: 100vh;
+}
+.scroll-downs {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  
+  width :34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+  right: 16px;
+  bottom: 0;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+/* Nav
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+nav {
+  float: right;
+  position: fixed;
+  height: 80px;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0px 40px;
+  z-index: 4;
+}
+nav .logo {
+  float: left;
+  width: 215px;
+  margin-top: -24px;
+  background: url(../images/atg-logo.png) center no-repeat;
+  background-size: cover;
+}
+nav ul {
+  float: right;
+}
+nav ul li {
+  display: inline-block;
+  color: var(--second-text-color);
+  margin-left: 20px;
+}
+nav ul li a {
+  color: var(--second-text-color);
+  display: block;
+  clear: right;
+}
+nav ul li a:hover {
+  color: var(--accent-text-color);
+  transition: all 0.3s;
+}
+label {
+  margin: 0;
+  margin-top: -24px;
+  font-size: 24px;
+  color: var(--second-text-color);
+  display: none;
+  width: 24px;
+  float: right;
+  z-index: 5;
+}
+#toggle {
+  display: none;
+}
+#header-mobbar {
+  background: #000000;
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  top: -40px;
+  z-index: -2;
+  display: none;
+}
+#nav-bg {
+  background: #000000;
+  position: sticky;
+  height: 100px;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#company,
+#services,
+#tech,
+#culture {
+  height: calc(100vh - 100px);
+  max-height: 1080px;
+}
+#company .container,
+#services .container,
+#tech .container,
+#culture .container {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.fa {
+  margin-left: 5px;
+  color: var(--accent-text-color);
+}
+#stats {
+  background-color: #3399CC;
+}
+.box {
+  float: left;
+  width: 25%;
+  height: 350px;
+  padding: 2.5%;
+  color: white;
+}
+.box h3 {
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+#box1 {
+  background-color: #161718;
+}
+#box2 {
+  background-color: #2B2D2E;
+}
+#box3 {
+  background-color: #3C3E40;
+}
+#box4 {
+  background-color: #525556;
+}
+#box5 {
+  background-color: #DFE2E6;
+  color: #757575;
+}
+#box6 {
+  background-color: #ffffff;
+  color: #757575;
+}
+#box7 {
+  background: url(../images/bluebox.jpg) center no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  display: block;
+}
+#box8 {
+  background-color: #3399CC;
+}
+#company {
+  background: url(../images/01_edit.jpg) center no-repeat;
+  background-size: cover;
+}
+#services {
+  background: url(../images/02_edit.jpg) center no-repeat;
+  background-size: cover;
+}
+#tech {
+  background: url(../images/03_edit.jpg) center no-repeat;
+  background-size: cover;
+}
+#culture {
+  background: url(../images/04_edit.jpg) center no-repeat;
+  background-size: cover;
+}
+#join {
+  background-color: #2B2D2E;
+}
+#join .container {
+  padding: 80px 0 60px 0;
+}
+#join .container h3 {
+  margin-bottom: 40px;
+}
+#join .container h4 {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.parallax {
+  background-attachment: fixed !important;
+}
+footer {
+  color: #9E9E9E;
+  font-size: 16px;
+  background-color: #161718;
+  padding: 30px;
+}
+footer p {
+  margin: 0;
+}
+footer a {
+  color: var(--first-text-color);
+}
+
+/* MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 1024px) { /*Tablets and less*/
+  h2 {
+    margin-bottom: 48px;
+  }
+  .box {
+    width: 50%;
+    height: 330px;
+    padding: 3%;
+  }
+}
+@media screen and (max-width: 650px) { /*Nav breakpoint*/
+  html {
+    scroll-padding-top: 75px;
+  }
+  nav {
+    padding: 0px;
+  }
+  nav .logo {
+    width: 130px;
+    margin-left: 20px;
+  }
+  label {
+    display: block;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  label #hamburg {
+    display: block;
+  }
+  label #close {
+    display: none;
+  }
+  nav ul {
+    background-color: var(--main-bg-color);
+    width: 100%;
+  }
+  nav ul li {
+    display: none;
+    text-align: center;
+    margin: 40px 0px;
+    width: 100%;
+  }
+  nav ul li a {
+    display: none;
+    margin: 0;
+  }
+  #toggle:checked ~ ul li, #toggle:checked ~ ul li a {
+    display: block; 
+  }
+  #toggle:checked ~ label #hamburg {
+    display: none;
+  }
+  #toggle:checked ~ label #close {
+    display: block;
+  }
+  #toggle:checked ~ #header-mobbar {
+    height: 75px;
+    display: block;
+  }
+  #nav-bg {
+    height: 75px;
+  }
+  #company,
+  #services,
+  #tech,
+  #culture {
+    height: calc(100vh - 75px);
+  }
+  #join .container {
+    padding: 40px 16px;
+  }
+}
+@media screen and (max-width: 500px) { /*Mobile and less*/
+  header h1 {
+    margin-bottom: 40px;
+  }
+  h2 {
+    margin-bottom: 40px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .scroll-downs{
+    position: relative;
+  }
+  .box {
+    width: 100%;
+    height: 275px;
+    padding: 3.5%;
+  }
+  .box h3 {
+    font-size: 24px;
+  }
+  .box p {
+    font-size: 16px;
+  }
+  #box7 {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) { /*SMALL mobile*/
+  h2 {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  a.button {
+    margin-top: 0px;
+  }
+  #join .container {
+    padding: 20px 16px !important;
+  }
+  #join .container h3 {
+    margin-bottom: 32px;
+  }
+  #join .container h4 {
+    padding: 8px;
+  }
+  .join-button {
+    margin-top: 30px !important;
+  }
+}
