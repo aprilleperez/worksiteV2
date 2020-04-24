@@ -167,7 +167,7 @@ header .content {
 /* FIGURE OUT WHY THIS ISNT CENTERING IN THE HEADER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #atg-hero {
-  position: fixed;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   top: 50%;
