@@ -1,6 +1,7 @@
 // Makes header section fade away
 $(window).scroll(function () {
-	$("header").css("opacity", 1 - $(window).scrollTop() / 1000);
+	$("header").css("opacity", 1 - $(window).scrollTop() / 700);
+	$(".scroll-downs").css("opacity", 1 - $(window).scrollTop() / 150);
 	$("#intro").css("opacity", 1 - $(window).scrollTop() / 2500);
 });
 
@@ -10,7 +11,7 @@ $(function() {
 	$(window).scroll(function() {
 	  var scroll = $(window).scrollTop();
   
-	  if (scroll >= 30) {
+	  if (scroll >= 25) {
 		text.removeClass("hidden");
 	  } else {
 		text.addClass("hidden");

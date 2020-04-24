@@ -355,6 +355,10 @@ label {
 
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+#interim {
+  height: 25vh;
+}
+
 #intro {
   height: calc(100vh - 100px);
   /* height: 100vh; */
