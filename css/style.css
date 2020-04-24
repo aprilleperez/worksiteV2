@@ -62,7 +62,7 @@ h3 {
   letter-spacing: 1px;
   margin-bottom: 60px;
 }
-h1:before,
+/* h1:before,
 h2:before {
   content: "";
   display: block;
@@ -70,7 +70,7 @@ h2:before {
   width: 64px;
   background: #3399CC;
   margin-bottom: 10px;
-}
+} */
 h4 {
   font-size: 24px;
   font-weight: 300;
@@ -145,12 +145,17 @@ a.button.white:active {
   transition: 0.3s;
 }
 
+
+
+
+
+
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
   height: 100vh;
-  /* background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(51,153,204,1) 100%); */
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(51,153,204,1) 0%, rgba(0,0,0,1) 100%);
 }
 header .content {
   bottom: 100px;
@@ -158,6 +163,15 @@ header .content {
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* FIGURE OUT WHY THIS ISNT CENTERING IN THE HEADER UGH
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* #atg-hero {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+} */
 .hero-text {
   position: fixed;
   top: 50%;
@@ -165,16 +179,10 @@ header .content {
   transform: translateX(-50%) translateY(-50%);
   list-style: none;
   border-bottom: 0;
-  /* width: 100%; */
 }
-
-.hero-text.hidden {
-  /* border-bottom: 1px solid #fff; */
-}
-
 .hero-text li {
   display: inline-block;
-  float: left;
+  /* float: left; */
   font-weight: 700;
   font-size: 2em;
   color: #fff;
@@ -188,19 +196,19 @@ header .content {
 .hero-text li.spaced {
   padding-left: 0.5em;
 }
-
 .hero-text.hidden li.ghost {
   opacity: 0;
   max-width: 0;
 }
+
 
 .banner {
   z-index: -999;
   position: absolute;
   height: 100%;
   width: 100%;
-  background: url(../images/header-bg.jpg) center no-repeat;
-  background-size: cover;
+  /* background: url(../images/header-bg.jpg) center no-repeat;
+  background-size: cover; */
 }
 .banner .overlay-1 {
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.08) 17%, rgba(0, 0, 0, 0.07) 25%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.6) 83%, #000000 100%);
@@ -236,10 +244,11 @@ header .content {
 }
 .scroll-downs {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  /* right: 0;
+  bottom: 0; */
+  left: 50%;
+  transform: translateX(-50%);
   margin: auto;
-  
   width :34px;
   height: 55px;
 }
@@ -309,6 +318,7 @@ nav ul li a:hover {
   color: var(--accent-text-color);
   transition: all 0.3s;
 }
+/* Mobile Nav stuff */
 label {
   margin: 0;
   margin-top: -24px;
