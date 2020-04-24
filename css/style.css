@@ -158,20 +158,20 @@ header {
   background: linear-gradient(180deg, rgba(51,153,204,1) 0%, rgba(0,0,0,1) 100%);
 }
 header .content {
-  bottom: 100px;
+  bottom: 200px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-/* FIGURE OUT WHY THIS ISNT CENTERING IN THE HEADER UGH
+/* FIGURE OUT WHY THIS ISNT CENTERING IN THE HEADER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* #atg-hero {
-  position: relative;
+#atg-hero {
+  position: fixed;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   top: 50%;
-} */
+}
 .hero-text {
   position: fixed;
   top: 50%;
@@ -180,9 +180,12 @@ header .content {
   list-style: none;
   border-bottom: 0;
 }
+.hero-text.hidden {
+  border-bottom: 1px solid #fff;
+}
 .hero-text li {
   display: inline-block;
-  /* float: left; */
+  float: left;
   font-weight: 700;
   font-size: 2em;
   color: #fff;
