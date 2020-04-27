@@ -1,8 +1,8 @@
 // Makes header section fade away
 $(window).scroll(function () {
-	$("header").css("opacity", 1 - $(window).scrollTop() / 700);
+	$("header").css("opacity", 1 - $(window).scrollTop() / 800);
 	$(".scroll-downs").css("opacity", 1 - $(window).scrollTop() / 150);
-	$("#intro").css("opacity", 1 - $(window).scrollTop() / 2500);
+	$("#intro").css("opacity", 1 - $(window).scrollTop() / 4000);
 });
 
 // Makes ATG expand on scroll
@@ -30,31 +30,31 @@ $(function() {
 //   });
 
 // Counter for stats
-var a = 0;
-$(window).scroll(function () {
-//change back to stats if not working?
-	var oTop = $('#intro').offset().top - window.innerHeight;
-	if (a == 0 && $(window).scrollTop() > oTop) {
-		$('.counter').each(function () {
-			var $this = $(this),
-				countTo = $this.attr('data-count');
-			$({
-				countNum: $this.text()
-			}).animate({
-				countNum: countTo
-			},
-				{
-					duration: 2000,
-					easing: 'swing',
-					step: function () {
-						$this.text(Math.floor(this.countNum));
-					},
-					complete: function () {
-						$this.text(this.countNum);
-						//alert('finished');
-					}
-				});
-		});
-		a = 1;
-	}
-});
+// var a = 0;
+// $(window).scroll(function () {
+// //change back to stats if not working?
+// 	var oTop = $('#intro').offset().top - window.innerHeight;
+// 	if (a == 0 && $(window).scrollTop() > oTop) {
+// 		$('.counter').each(function () {
+// 			var $this = $(this),
+// 				countTo = $this.attr('data-count');
+// 			$({
+// 				countNum: $this.text()
+// 			}).animate({
+// 				countNum: countTo
+// 			},
+// 				{
+// 					duration: 2000,
+// 					easing: 'swing',
+// 					step: function () {
+// 						$this.text(Math.floor(this.countNum));
+// 					},
+// 					complete: function () {
+// 						$this.text(this.countNum);
+// 						//alert('finished');
+// 					}
+// 				});
+// 		});
+// 		a = 1;
+// 	}
+// });
