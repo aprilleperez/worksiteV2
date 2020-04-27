@@ -636,7 +636,7 @@ footer a {
 
 /* MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media screen and (max-width: 1024px) { /*Tablets and less*/
+@media screen and (max-width: 1024px) { /* Tablets and less */
   h2 {
     margin-bottom: 48px;
   }
@@ -646,7 +646,7 @@ footer a {
     padding: 3%;
   } */
 }
-@media screen and (max-width: 650px) { /*Nav breakpoint*/
+@media screen and (max-width: 600px) { /* Breakpoint/Mobile */
   html {
     scroll-padding-top: 75px;
   }
@@ -713,8 +713,10 @@ footer a {
   #join .container {
     padding: 40px 16px;
   }
-}
-@media screen and (max-width: 500px) { /*Mobile and less*/
+  #join h4 {
+    font-size: 16px;
+  }
+
   header h1 {
     margin-bottom: 40px;
   }
@@ -724,34 +726,42 @@ footer a {
   p {
     font-size: 16px;
   }
-  .scroll-downs{
+  /* .scroll-downs{
     position: relative;
-  }
+  } */
 
   #company .content, 
   #culture .content {
   width: calc(100vw - 25vw);
   }
 }
-@media screen and (max-width: 370px) { /*SMALL mobile*/
+/* @media screen and (max-width: 500px) { Mobile and less */
+
+/* } */
+@media screen and (max-width: 370px) { /* SMALL mobile */
   h2 {
     font-size: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
   h3 {
-    font-size: 32px;
+    font-size: 24px;
   }
   a.button {
     margin-top: 0px;
+  }
+  #intro p {
+    font-size: 32px;
   }
   #join .container {
     padding: 20px 16px !important;
   }
   #join .container h3 {
+    margin-top: 16px;
     margin-bottom: 32px;
   }
   #join .container h4 {
     padding: 8px;
+    font-size: 16px;
   }
   .join-button {
     margin-top: 30px !important;
