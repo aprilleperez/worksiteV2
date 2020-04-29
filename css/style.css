@@ -423,15 +423,11 @@ label {
 }
 
 #company,
-#services,
-#tech,
 #culture {
   height: calc(100vh - 100px);
   max-height: 1080px;
 }
 #company .container,
-#services .container,
-#tech .container,
 #culture .container {
   top: 50%;
   transform: translateY(-50%);
@@ -503,18 +499,11 @@ label {
   position: relative;
 }
 #company .content, 
-#culture .content {
+#culture .content,
+#join .content {
   margin: 0 auto;
   position: relative;
   width: calc(100vw/2);
-}
-#services {
-  background: url(../images/02_edit.jpg) center no-repeat;
-  background-size: cover;
-}
-#tech {
-  background: url(../images/03_edit.jpg) center no-repeat;
-  background-size: cover;
 }
 #culture {
   background: url(../images/04_edit.jpg) center no-repeat;
@@ -628,13 +617,12 @@ footer a {
     position: absolute !important;
   }
   #company,
-  #services,
-  #tech,
   #culture {
     height: calc(100vh - 75px);
   }
   #company .content, 
-  #culture .content {
+  #culture .content,
+  #join .content {
   width: calc(100vw - 25vw);
   }
   #join .container {
