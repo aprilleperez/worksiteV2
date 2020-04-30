@@ -145,7 +145,7 @@ a.button.white:active {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
   height: 100vh;
-  background: rgb(255,255,255);
+  /* background: rgb(255,255,255); */
   background: linear-gradient(180deg, rgba(51,153,204,1) 0%, rgba(0,0,0,1) 100%);
 }
 header .content {
@@ -393,7 +393,8 @@ label {
   display: none;
 }
 #nav-bg {
-  background: #000000;
+  /* background: #000000; */
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
   position: sticky;
   height: 100px;
   width: 100%;
@@ -543,6 +544,9 @@ footer a {
 
 /* MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 1110px) { /* ATG breakpoint */
+/* RESERVE FOR ATG ANIM FIX */
+}
 @media screen and (max-width: 1024px) { /* Tablets and less */
   h2 {
     margin-bottom: 48px;
