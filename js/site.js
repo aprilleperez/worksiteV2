@@ -18,7 +18,7 @@ $(function () {
 			disappear.hide();
 		} else {
 			text.addClass("hidden");
-			disappear.show();
+			disappear.show("slow");
 		}
 	});
 });
