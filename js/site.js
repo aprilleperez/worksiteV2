@@ -6,15 +6,19 @@ $(window).scroll(function () {
 });
 
 // Makes ATG expand on scroll
-$(function() {
+$(function () {
 	var text = $(".hero-text");
-	$(window).scroll(function() {
-	  var scroll = $(window).scrollTop();
-  
-	  if (scroll >= 25) {
-		text.removeClass("hidden");
-	  } else {
-		text.addClass("hidden");
-	  }
+	var disappear = $(".spaced");
+
+	$(window).scroll(function () {
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= 25) {
+			text.removeClass("hidden");
+			disappear.hide();
+		} else {
+			text.addClass("hidden");
+			disappear.show();
+		}
 	});
-  });
+});
