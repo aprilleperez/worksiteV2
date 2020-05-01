@@ -580,7 +580,7 @@ label {
   width: calc(100vw/2);
 }
 #culture {
-  background: url(../images/04_edit.jpg) center no-repeat;
+  background: url(../images/culture.jpg) center no-repeat;
   background-size: cover;
 }
 #join {
