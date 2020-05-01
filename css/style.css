@@ -228,6 +228,50 @@ header .content {
   top: 50%;
   text-align: center;
 }
+.phrase {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  color: white;
+  text-align: center;
+  transform: translateX(-50%) translateY(-30%);
+  list-style: none;
+  border-bottom: 0;
+
+  background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 24px;
+  -webkit-animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+          animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+}
+@-webkit-keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@-webkit-keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
 /* .hero-text {
   position: fixed;
   top: 50%;
@@ -263,8 +307,8 @@ header .content {
 .hero-text li {
   display: block;
   float: left;
-  font-weight: 700;
   font-size: 2em;
+  letter-spacing: .03em;
   color: #fff;
   opacity: 1;
   transition: all 0.5s ease-in-out;
@@ -275,6 +319,8 @@ header .content {
 }
 .hero-text li.spaced {
   padding-left: 0.5em;
+  -webkit-animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
 }
 .hero-text.hidden li.ghost {
   opacity: 0;
@@ -325,6 +371,7 @@ header .content {
 .scroll-downs {
   position: absolute;
   left: 50%;
+  bottom: -120px;
   transform: translateX(-50%);
   margin: auto;
   width :34px;
@@ -670,6 +717,9 @@ footer a {
   }
   a.button {
     margin-top: 0px;
+  }
+  .phrase {
+    font-size: 16px;
   }
   #intro p {
     font-size: 24px;

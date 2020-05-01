@@ -1,7 +1,7 @@
 // Fade aways
 $(window).scroll(function () {
 	$("header").css("opacity", 1 - $(window).scrollTop() / 800);
-	$(".scroll-downs").css("opacity", 1 - $(window).scrollTop() / 150);
+	$(".scroll-downs, .phrase").css("opacity", 1 - $(window).scrollTop() / 100);
 	$("#intro").css("opacity", 1 - $(window).scrollTop() / 4000);
 });
 
